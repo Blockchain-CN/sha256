@@ -56,6 +56,11 @@ func StopHash() bool {
 	return atomic.CompareAndSwapInt32(&stop, 0, 1)
 }
 
+// StartHash ...
+func StartHash() bool {
+	return atomic.CompareAndSwapInt32(&stop, 1, 0)
+}
+
 // Verification to test if the data's hash is equal to a string
 func Verification(data []byte, hash string) bool {
 	var new [Size]byte
