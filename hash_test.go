@@ -13,7 +13,7 @@ func TestHashwithDifficulty(t *testing.T) {
 		StopHash()
 	}()
 	data := []byte("hello world")
-	sum, nonce := HashwithDifficulty(data, 6)
+	sum, nonce := HashwithDifficulty(data, 3)
 	fmt.Println("nonce = ", nonce)
 	fmt.Printf("%x\n", sum)
 	// Output: a948904f2f0f479b8f8197694b30184b0d2ed1c1cd2a1ec0fb85d299a192a447
