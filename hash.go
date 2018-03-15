@@ -68,5 +68,5 @@ func Verification(data []byte, hash string) bool {
 	if !difficulty(new, tmpDifficulty) {
 		return false
 	}
-	return hash == fmt.Sprint(new)
+	return hash == fmt.Sprintf("%x", new)
 }
